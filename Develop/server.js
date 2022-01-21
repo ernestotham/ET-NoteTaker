@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const db = require('./db/db.json')
+var db = require('./db/db.json');
+let { readFromJsonDB, writeToJsonDB, AppendJsonDB } = require('./lib/localJSONDB');
 
 const PORT = process.env.port || 4500;
 const app = express();
@@ -9,18 +10,22 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true}));
 
-//api route to get notes
 app.get('/api/notes',(req, res) => {
 
-res.json(db)
+    const JsonDB = readFromJsonDB("./db/db.json")
+    res.status(200).json(JsonDB)
 
-} );
+    } );
+
+
 
 //api route to save notes
 app.post('/api/notes',(req, res) => {
-
-
-
+    
+    res.status(200).json(AppendJsonDB("./db/db.json", req.body ))
+    
+   
+    
 } );
 
 

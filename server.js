@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path');
-var db = require('./db/db.json');
 let { readFromJsonDB, writeToJsonDB, AppendJsonDB } = require('./lib/localJSONDB');
 
-const PORT = process.env.port || 4500;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.json());

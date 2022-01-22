@@ -24,7 +24,7 @@ app.post('/api/notes',(req, res) => {
     
     res.status(200).json(AppendJsonDB("./db/db.json", req.body ))
     
-   
+  
     
 } );
 
@@ -32,8 +32,8 @@ app.post('/api/notes',(req, res) => {
 //api route to delete notes for bonus
 app.delete('/api/notes/:id',(req, res) => {
 
-
-
+console.log(req.body)
+res.json(req.body)
 } );
 
 

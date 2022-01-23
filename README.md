@@ -69,7 +69,9 @@ For any questions reach out to me at ernestotha@gmail.com
 
 ## repo:
   https://github.com/ernestotham/ET-NoteTaker
-## video demo:
+  
+## Link to live demo:
+https://et-notetaker.herokuapp.com/
 
 ## Sample image:
 

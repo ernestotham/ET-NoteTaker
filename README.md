@@ -67,5 +67,14 @@ Github profile: @ernestotham
 For any questions reach out to me at ernestotha@gmail.com
 
 
+## repo:
+  https://github.com/ernestotham/ET-NoteTaker
+  
+## Link to live demo:
+https://et-notetaker.herokuapp.com/
+
+## Sample image:
+
+![NoteTaker](https://user-images.githubusercontent.com/23125242/150665615-12ef3a1c-50ef-4caa-88b3-83c4f24e3b5e.jpg)
 
 

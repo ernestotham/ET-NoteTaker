@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-let { readFromJsonDB, AppendJsonDB } = require('./lib/localJSONDB');
+let { readFromJsonDB, AppendJsonDB, RemoveItemFromJsonDB } = require('./lib/localJSONDB');
 
 const PORT = process.env.PORT || 4501;
 const app = express();
@@ -30,9 +30,9 @@ app.post('/api/notes',(req, res) => {
 
 //api route to delete notes for bonus
 app.delete('/api/notes/:id',(req, res) => {
-
-console.log(req.body)
-res.json(req.body)
+  
+// console.log(req.params.id)
+res.json(RemoveItemFromJsonDB("./db/db.json", req.params.id))
 } );
 
 

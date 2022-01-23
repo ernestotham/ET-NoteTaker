@@ -7,33 +7,33 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/api/notes',(req, res) => {
+app.get('/api/notes', (req, res) => {
 
-    const JsonDB = readFromJsonDB("./db/db.json")
-    res.status(200).json(JsonDB)
+  const JsonDB = readFromJsonDB("./db/db.json")
+  res.status(200).json(JsonDB)
 
-    } );
+});
 
 
 
 //api route to save notes
-app.post('/api/notes',(req, res) => {
-    
-    res.status(200).json(AppendJsonDB("./db/db.json", req.body ))
-    
-  
-    
-} );
+app.post('/api/notes', (req, res) => {
+
+  res.status(200).json(AppendJsonDB("./db/db.json", req.body))
+
+
+
+});
 
 
 //api route to delete notes for bonus
-app.delete('/api/notes/:id',(req, res) => {
-  
-// console.log(req.params.id)
-res.json(RemoveItemFromJsonDB("./db/db.json", req.params.id))
-} );
+app.delete('/api/notes/:id', (req, res) => {
+
+  // console.log(req.params.id)
+  res.json(RemoveItemFromJsonDB("./db/db.json", req.params.id))
+});
 
 
 //HTML routes
